@@ -1,0 +1,20 @@
+{%extends 'base.html' %}
+
+{%block title%} First Blogging Website {%endblock%}
+
+{%block content%}
+
+<div class="containe-custom">
+    <h3>{{cat.title}}</h3>
+    <div class="img-container">
+      <img src="/media/{{cat.image}}" class="responsive-img" style="object-fit:cover;" alt="">
+    </div>
+</div>
+<div class="collection">
+    {% for p in post%}
+      <a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a>
+      {%endfor%}
+    </div>
+
+
+{%endblock%}
